@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour{
 
     public GameObject cube;
     public int screenWidth;
     public int screenHeight;
     public float gapLengthRate;
     public float topPadding;
+
+    public Coordinate GetCoordinate(int x, int y)
+    {
+        Coordinate coordinate = new Coordinate ();
+        return coordinate;
+    }
 
     // Cube count = screenHeight * screenHeight
     public void SpawnCubes()
@@ -23,7 +29,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
+    // Use this for initialization
 	void Start () {
         SpawnCubes ();
     }
@@ -32,4 +38,10 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void BuildScreenLayout()
+    {
+        
+    }
 }
+
