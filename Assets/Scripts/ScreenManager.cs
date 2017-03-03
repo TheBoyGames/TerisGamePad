@@ -20,7 +20,15 @@ public class ScreenManager : Base
 
     private void SetUpBackground()
     {
-        
+        int width = gameManager.cubeWidthCount;
+        int height = gameManager.cubeHeightCount;
+
+        for (int i = width / 2 * -1; i < width / 2 - 1; i++) 
+        {
+            for (int n = height / 2 * -1; n < gameManager.cubeHeightCount; n++)
+            {
+            }
+        }
     }
 
     private void SetUpBorder()
@@ -44,5 +52,6 @@ public class ScreenManager : Base
         }
     
     }
+
 }
 
