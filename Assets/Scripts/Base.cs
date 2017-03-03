@@ -1,17 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-public abstract class Base : MonoBehaviour
+public abstract class Base
 {
     protected GameManager gameManager;
         
-    protected void Init()
+    public  Base()
     {
-        gameManager = GameObject.FindObjectOfType ("GameManager");
+        gameManager = GameObject.FindObjectOfType (typeof(GameManager)) as GameManager;
         if (null == gameManager)
         {
             gameManager = new GameManager ();
         }
     }
+
 }
 

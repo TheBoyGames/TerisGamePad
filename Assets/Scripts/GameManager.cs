@@ -5,10 +5,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour{
 
     public GameObject cube;
-    public int screenWidth;
-    public int screenHeight;
+    public GameObject bgCube;
+    public GameObject borderCube;
+
+    public int cubeWidthCount;
+    public int cubeHeightCount;
     public float gapLengthRate;
+    public float borderGapLengthRate;
     public float topPadding;
+    public float cubeWidth;
+    public float cubeHeight;
+    public float bgCubeWidth;
+    public float bgCubeHeight;
+    public float borderCubeWidth;
+    public float borderCubeHeight;
+
+    private ScreenManager screenManager;
 
     public Coordinate GetCoordinate(int x, int y)
     {
@@ -16,22 +28,10 @@ public class GameManager : MonoBehaviour{
         return coordinate;
     }
 
-    // Cube count = screenHeight * screenHeight
-    public void SpawnCubes()
-    {
-        for (int i = screenWidth / 2 * (-1); i < screenWidth / 2; i++) 
-        {
-            for (int n = screenHeight / 2 * (-1); n < screenHeight / 2; n++) 
-            {
-                Vector3 position = new Vector3 (i * gapLengthRate, n * gapLengthRate + topPadding, 0);
-                Instantiate (cube, position, Quaternion.identity);    
-            }
-        }
-    }
-
     // Use this for initialization
 	void Start () {
-        SpawnCubes ();
+        
+        screenManager = new ScreenManager();
     }
 	
 	// Update is called once per frame
