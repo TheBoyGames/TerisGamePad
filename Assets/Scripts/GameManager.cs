@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour{
     public int cubeWidthCount;
     public int cubeHeightCount;
     public float gapLengthRate;
+    public float gapLength;
     public float topPadding;
     public float cubeWidth;
     public float cubeHeight;

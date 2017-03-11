@@ -86,7 +86,7 @@ public class ScreenManager : Base
             for (int n = 0; n < screenHeight; n++)
             {
                 screen[i, n] = 0;
-                Vector3 position = new Vector3 (i * gameManager.gapLengthRate, n * gameManager.gapLengthRate + gameManager.topPadding, 0.0f);
+                Vector3 position = new Vector3 (i + gameManager.gapLength, n + gameManager.gapLength + gameManager.topPadding, 0.0f);
                 GameObject.Instantiate (gameManager.bgCube, position, Quaternion.identity);
             }
         }
