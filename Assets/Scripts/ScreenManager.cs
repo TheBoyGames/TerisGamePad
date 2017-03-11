@@ -7,7 +7,6 @@ using Random = UnityEngine.Random;
 public class ScreenManager : Base
 {
     // this manager should setup the screen and manage the draw cube in the screen
-
     public  int[,] screen;
 
     private int screenWidth;
@@ -17,6 +16,15 @@ public class ScreenManager : Base
     private const int ENUM_CB = 1;
     private List<GameObject> cubeList = new List<GameObject>();
 
+    public void DrawPoint()
+    {
+        screen [1, 3] = ENUM_CB;
+    }
+
+    public void TurnRight()
+    {
+        
+    }
 
     public void Draw()
     {
